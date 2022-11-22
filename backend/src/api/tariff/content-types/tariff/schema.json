@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tariffs",
+  "info": {
+    "singularName": "tariff",
+    "pluralName": "tariffs",
+    "displayName": "Tariff"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tariffTitle": {
+      "type": "string",
+      "required": true
+    },
+    "tariffDescription": {
+      "type": "string",
+      "required": true
+    },
+    "tariffSpeed": {
+      "required": true,
+      "type": "integer"
+    },
+    "tariffPrice": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
