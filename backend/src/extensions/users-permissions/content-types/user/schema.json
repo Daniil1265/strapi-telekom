@@ -63,11 +63,6 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "tariff": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::tariff.tariff"
-    },
     "nickname": {
       "type": "string",
       "required": true

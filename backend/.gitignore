@@ -30,7 +30,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-*.bak
 
 
 ############################
@@ -107,7 +106,7 @@ coverage
 # Strapi
 ############################
 
-#.env
+.env
 license.txt
 exports
 *.cache

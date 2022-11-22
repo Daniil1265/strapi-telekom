@@ -1,5 +1,5 @@
 {
-  "name": "telekom",
+  "name": "my-project",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
@@ -20,7 +20,7 @@
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "0c13f3cc-6c72-4144-bac1-a254af0c384c"
+    "uuid": "002c4125-019d-45c8-8304-e341b9e366e8"
   },
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
