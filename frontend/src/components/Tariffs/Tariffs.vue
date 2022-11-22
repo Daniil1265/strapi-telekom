@@ -1,7 +1,9 @@
 <template lang="ru">
     <div class="tariffs">
+        <p v-if="tariffs.length===0">Тарифов нет</p>
         <Tariff v-for="tariff in tariffs" v-bind:tariff="tariff"/>
     </div>
+    
    
 </template>
 <script>
@@ -11,6 +13,7 @@ export default {
     props: ["tariffs"],
 
 }
+
 </script>
 <style scoped>
 .tariffs {

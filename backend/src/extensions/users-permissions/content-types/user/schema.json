@@ -65,9 +65,8 @@
     },
     "tariff": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::tariff.tariff",
-      "inversedBy": "users_permissions_users"
+      "relation": "oneToOne",
+      "target": "api::tariff.tariff"
     },
     "nickname": {
       "type": "string",
