@@ -2,12 +2,8 @@
     <div id="app">
         <nav class="navbar navbar-expand navbar-dark bg-dark">
             <a href="/" class="navbar-brand">bezKoder</a>
-            <div class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <router-link to="/home" class="nav-link">
-                        <font-awesome-icon icon="home" /> Home
-                    </router-link>
-                </li>
+            <ul class="navbar-nav mr-auto">
+
                 <li v-if="showAdminBoard" class="nav-item">
                     <router-link to="/admin" class="nav-link">Admin Board</router-link>
                 </li>
@@ -17,9 +13,9 @@
                 <li class="nav-item">
                     <router-link v-if="currentUser" to="/user" class="nav-link">User</router-link>
                 </li>
-            </div>
+            </ul>
 
-            <div v-if="!currentUser" class="navbar-nav ml-auto">
+            <ul v-if="!currentUser" class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <router-link to="/register" class="nav-link">
                         <font-awesome-icon icon="user-plus" /> Sign Up
@@ -30,9 +26,9 @@
                         <font-awesome-icon icon="sign-in-alt" /> Login
                     </router-link>
                 </li>
-            </div>
+            </ul>
 
-            <div v-if="currentUser" class="navbar-nav ml-auto">
+            <ul v-if="currentUser" class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <router-link to="/profile" class="nav-link">
                         <font-awesome-icon icon="user" />
@@ -44,7 +40,7 @@
                         <font-awesome-icon icon="sign-out-alt" /> LogOut
                     </a>
                 </li>
-            </div>
+            </ul>
         </nav>
 
         <div class="container">
