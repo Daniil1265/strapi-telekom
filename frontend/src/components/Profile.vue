@@ -16,7 +16,11 @@
         </p>
         <p>
             <strong>Тариф:</strong>
-            {{ currentTariff }}
+            <span v-if="tariffNull === null">Вы не подключены к тарифу</span>
+            <span v-else-if="currentTariff === undefined">Загрузка</span>
+            <span v-else-if="currentTariff === currentTariff">{{ currentTariff }}</span>
+            <span v-else>Что то пошло не так</span>
+            
         </p>
     </div>
 </template>
@@ -33,6 +37,11 @@ export default {
         },
         currentTariff() {
             return this.$store.state.tariff.tariff.data?.tariff?.tariffTitle;
+        },
+        tariffNull () {
+
+            return this.$store.state.tariff.tariff.data?.tariff;
+
         },
     },
     mounted() {
