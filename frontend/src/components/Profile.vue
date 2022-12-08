@@ -32,7 +32,7 @@ export default {
 
         },
         currentTariff() {
-            return console.log(this.$store.state.tariff);
+            return this.$store.state.tariff.tariff.data?.tariff?.tariffTitle;
         },
     },
     mounted() {

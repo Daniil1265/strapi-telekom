@@ -13,7 +13,7 @@ export const tariff = ({
                 },
 
                 );
-                commit("SET_TARIFF", tariff.tariff);
+                commit("SET_TARIFF", tariff);
             } catch (error) {
                 alert(error);
                 console.log(error);
