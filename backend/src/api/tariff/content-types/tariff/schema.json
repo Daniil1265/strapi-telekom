@@ -4,7 +4,8 @@
   "info": {
     "singularName": "tariff",
     "pluralName": "tariffs",
-    "displayName": "Tariff"
+    "displayName": "Tariff",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,6 +27,12 @@
     "tariffPrice": {
       "type": "integer",
       "required": true
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "tariff"
     }
   }
 }

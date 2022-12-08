@@ -8,8 +8,16 @@ class UserService {
         return axios.get(API_URL + 'tariffs');
     }
 
+
+
     getUserBoard() {
-        return axios.get(API_URL + 'users/me', { headers: authHeader() });
+
+        if (authHeader().Authorization) {
+            return axios.get(API_URL + 'users/me?populate=tariff', { headers: authHeader() })
+        } else {
+            this.getPublicContent();
+        }
+
     }
 
     getModeratorBoard() {

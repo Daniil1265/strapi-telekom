@@ -1,29 +1,22 @@
 <template>
     <div id="app">
         <nav class="navbar navbar-expand navbar-dark bg-dark">
-            <a href="/" class="navbar-brand">bezKoder</a>
+            <router-link to="/" class="navbar-brand">Главная</router-link>
             <ul class="navbar-nav mr-auto">
-
-                <li v-if="showAdminBoard" class="nav-item">
-                    <router-link to="/admin" class="nav-link">Admin Board</router-link>
-                </li>
-                <li v-if="showModeratorBoard" class="nav-item">
-                    <router-link to="/mod" class="nav-link">Moderator Board</router-link>
-                </li>
                 <li class="nav-item">
-                    <router-link v-if="currentUser" to="/user" class="nav-link">User</router-link>
+                    <router-link v-if="currentUser" to="/user" class="nav-link">Услуги</router-link>
                 </li>
             </ul>
 
             <ul v-if="!currentUser" class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <router-link to="/register" class="nav-link">
-                        <font-awesome-icon icon="user-plus" /> Sign Up
+                        <font-awesome-icon icon="user-plus" /> Регестрация
                     </router-link>
                 </li>
                 <li class="nav-item">
                     <router-link to="/login" class="nav-link">
-                        <font-awesome-icon icon="sign-in-alt" /> Login
+                        <font-awesome-icon icon="sign-in-alt" /> Вход
                     </router-link>
                 </li>
             </ul>
@@ -37,7 +30,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" @click.prevent="logOut">
-                        <font-awesome-icon icon="sign-out-alt" /> LogOut
+                        <font-awesome-icon icon="sign-out-alt" /> Выход
                     </a>
                 </li>
             </ul>
@@ -50,7 +43,12 @@
 </template>
 
 <script>
+
 export default {
+    created() {
+        // Setting Language in the HTML document
+        document.documentElement.setAttribute('lang', 'ru')
+    },
     computed: {
         currentUser() {
             return this.$store.state.auth.user;

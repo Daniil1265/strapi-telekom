@@ -10,7 +10,7 @@ const BoardUser = () => import("./components/BoardUser.vue")
 
 const routes = [
     {
-        path: "/",
+        path: "",
         name: "home",
         component: Home,
     },

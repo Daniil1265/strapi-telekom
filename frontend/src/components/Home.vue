@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <header class="jumbotron">
-            <h3>Tariff</h3>
+            <h3>Страница с тарифами</h3>
         </header>
         <Tariffs v-bind:tariffs="content" />
     </div>
@@ -23,7 +23,6 @@ export default {
     mounted() {
         UserService.getPublicContent().then((response) => {
             this.content = response.data.data;
-            console.log(response.data);
         }, (error) => {
             this.error =
                 (error.response &&

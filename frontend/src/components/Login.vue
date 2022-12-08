@@ -9,7 +9,7 @@
                     <ErrorMessage name="email" class="error-feedback" />
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password">Пароль</label>
                     <Field name="password" type="password" class="form-control" />
                     <ErrorMessage name="password" class="error-feedback" />
                 </div>
@@ -17,7 +17,7 @@
                 <div class="form-group">
                     <button class="btn btn-primary btn-block" :disabled="loading">
                         <span v-show="loading" class="spinner-border spinner-border-sm"></span>
-                        <span>Login</span>
+                        <span>Войти</span>
                     </button>
                 </div>
 
@@ -65,7 +65,7 @@ export default {
     },
     created() {
         if (this.loggedIn) {
-            this.$router.push("/profile");
+            this.$router.push("/user");
         }
     },
     methods: {
@@ -74,7 +74,7 @@ export default {
 
             this.$store.dispatch("auth/login", user).then(
                 () => {
-                    this.$router.push("/profile");
+                    this.$router.push("/user");
                 },
                 (error) => {
                     this.loading = false;
