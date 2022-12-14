@@ -1,7 +1,14 @@
 <template>
     <div class="tariffs">
         <p v-if="tariffs.length === 0">Тарифов нет</p>
-        <Tariff v-for="tariff in tariffs" :key="tariff.id" v-bind:tariff="tariff" v-bind:user="user" />
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <Tariff v-for="tariff in tariffs" :key="tariff.id" v-bind:tariff="tariff" v-bind:user="user"
+                        class="card" />
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -43,9 +50,5 @@ export default {
 
 </script>
 <style scoped>
-.tariffs {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+
 </style>

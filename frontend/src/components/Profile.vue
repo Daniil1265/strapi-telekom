@@ -6,6 +6,7 @@
             </h3>
         </header>
 
+
         <p>
             <strong>Id:</strong>
             {{ currentUser.id }}
@@ -16,11 +17,9 @@
         </p>
         <p>
             <strong>Тариф:</strong>
-            <span v-if="tariffNull === null">Вы не подключены к тарифу</span>
-            <span v-else-if="currentTariff === undefined">Загрузка</span>
-            <span v-else-if="currentTariff === currentTariff">{{ currentTariff }}</span>
-            <span v-else>Что то пошло не так</span>
-            
+            <span v-if="currentTariff === null">Вы не подключены к тарифу</span>
+            <span v-else-if="currentTariff?.id === undefined">Загрузка...</span>
+            <span v-else>{{ currentTariff?.tariffTitle }}</span>
         </p>
     </div>
 </template>
@@ -35,11 +34,8 @@ export default {
             return this.$store.state.auth.user.user;
 
         },
-        currentTariff() {
-            return this.$store.state.tariff.tariff.data?.tariff?.tariffTitle;
-        },
-        tariffNull () {
 
+        currentTariff() {
             return this.$store.state.tariff.tariff.data?.tariff;
 
         },

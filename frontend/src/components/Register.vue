@@ -108,7 +108,7 @@ export default {
             this.loading = true;
             this.$store.dispatch("auth/register", user).then(
                 (data) => {
-                    this.message = `Register successful, ${data.user.nickname}`;
+                    this.message = `Регестрация пройдена успешно, ${data.user.nickname}`;
                     this.successful = true;
                     this.loading = false;
 

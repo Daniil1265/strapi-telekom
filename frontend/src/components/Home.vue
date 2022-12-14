@@ -1,10 +1,40 @@
 <template>
-    <div class="container">
-        <header class="jumbotron">
-            <h3>Страница с тарифами</h3>
-        </header>
-        <Tariffs v-bind:tariffs="content" />
+    <div class="container-fluid">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="../assets/img/29_09_22_wink5v1_cover_740x420_md__webp.webp"
+                        alt="Первый слайд">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Подключите Интернет прямо сейчас</h5>
+                        <p>Со скидкой</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/oblachnyeigry_122022_467x264_1.jpg"
+                        alt="Второй слайд">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="../assets/img/Videonabl-cam_092022_467x264.jpg" alt="Третий слайд">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </button>
     </div>
+    <Tariffs v-bind:tariffs="content" />
+
 </template>
 
 <script>
@@ -35,3 +65,9 @@ export default {
     components: { Tariffs }
 };
 </script>
+
+<style>
+.carousel-inner img {
+    margin: 0 auto;
+}
+</style>
