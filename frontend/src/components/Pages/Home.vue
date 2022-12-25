@@ -8,7 +8,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="../assets/img/29_09_22_wink5v1_cover_740x420_md__webp.webp"
+                    <img class="d-block w-100" src="../../assets/img/29_09_22_wink5v1_cover_740x420_md__webp.webp"
                         alt="Первый слайд">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Подключите Интернет прямо сейчас</h5>
@@ -16,11 +16,12 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../assets/img/oblachnyeigry_122022_467x264_1.jpg"
+                    <img class="d-block w-100" src="../../assets/img/oblachnyeigry_122022_467x264_1.jpg"
                         alt="Второй слайд">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="../assets/img/Videonabl-cam_092022_467x264.jpg" alt="Третий слайд">
+                    <img class="d-block w-100" src="../../assets/img/Videonabl-cam_092022_467x264.jpg"
+                        alt="Третий слайд">
                 </div>
             </div>
         </div>
@@ -34,12 +35,15 @@
         </button>
     </div>
     <Tariffs v-bind:tariffs="content" />
+    <YandexMap />
 
 </template>
 
 <script>
-import UserService from "../services/user.service";
-import Tariffs from './Tariffs/Tariffs.vue';
+import UserService from "../../services/user.service";
+import Tariffs from '../Tariffs/Tariffs.vue';
+import YandexMap from '../Map/YandexMap.vue';
+
 
 export default {
     name: "Home",
@@ -62,7 +66,7 @@ export default {
                 error.toString();
         });
     },
-    components: { Tariffs }
+    components: { Tariffs, YandexMap }
 };
 </script>
 

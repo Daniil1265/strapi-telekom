@@ -22,6 +22,7 @@ import UserService from '../../services/user.service';
 
 export default {
 
+
     mounted() {
         if (UserService.getUserBoard()) {
             UserService.getUserBoard().then((response) => {
@@ -37,6 +38,7 @@ export default {
         }
 
     },
+
     components: { Tariff },
     props: ["tariffs"],
 

@@ -3,9 +3,10 @@ import { auth } from "./auth.module";
 import { tariff } from "./tariff.module";
 
 
+
 const store = createStore({
     modules: {
-        auth, tariff,
+        auth, tariff
     },
 });
 
