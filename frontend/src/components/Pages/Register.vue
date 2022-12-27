@@ -61,23 +61,23 @@ export default {
         const schema = yup.object().shape({
             nickname: yup
                 .string()
-                .required("Nickname is required!")
-                .min(3, "Must be at least 3 characters!")
-                .max(50, "Must be maximum 50 characters!"),
+                .required("Введите имя")
+                .min(3, "Имя должно быть хотябы из 3 букв")
+                .max(50, "Имя может содержать макимум 50 символов"),
             email: yup
                 .string()
-                .required("Email is required!")
-                .email("Email is invalid!")
-                .max(50, "Must be maximum 50 characters!"),
+                .required("Введите E-mail")
+                .email("E-mail введен непраивльно")
+                .max(50, "E-mail может содержать макимум 50 символов"),
             password: yup
                 .string()
-                .required("Password is required!")
-                .min(6, "Must be at least 6 characters!")
-                .max(40, "Must be maximum 40 characters!"),
+                .required("Введите пароль")
+                .min(6, "Пароль должен содержать хотя бы 6 символов")
+                .max(40, "Пароль может содержать макимум 50 символов"),
             confirmation: yup
                 .string()
-                .required('Please retype your password.')
-                .oneOf([yup.ref('password')], 'Your passwords do not match.'),
+                .required('Повторите пароль')
+                .oneOf([yup.ref('password')], 'Пароли не совпадают'),
 
 
 
