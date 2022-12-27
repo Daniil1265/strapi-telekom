@@ -1,7 +1,7 @@
 <template>
     <YandexMap :settings="settings" :coordinates="cordCenter" map-type="map">
 
-        <YandexMarker v-for="cordinfo in json" :key="cordinfo.Markerid"
+        <YandexMarker v-for="cordinfo in Fulladdresses" :key="cordinfo.Markerid"
             :coordinates="cordinfo.Cells.geoData.coordinates" :marker-id=cordinfo.Markerid>
         </YandexMarker>
     </YandexMap>
@@ -12,7 +12,7 @@
 /* eslint-disable */
 
 import { YandexMap, YandexMarker } from 'vue-yandex-maps'
-import addresses from './addresses'
+import { Fulladdresses } from './addresses'
 
 
 const settings = {
@@ -26,12 +26,15 @@ const settings = {
 const cordCenter = [55.7522, 37.6156];
 
 
-const json = addresses
+
 
 </script>
   
 <style>
 .yandex-container {
     height: 300px;
+    max-width: 1100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 </style>

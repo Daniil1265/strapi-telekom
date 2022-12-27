@@ -5,9 +5,11 @@ import store from "./store";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from './plugins/font-awesome'
+import VueSelect from "vue-select";
 
 createApp(App)
     .use(router)
     .use(store)
     .component("font-awesome-icon", FontAwesomeIcon)
+    .component("v-select", VueSelect)
     .mount("#app");

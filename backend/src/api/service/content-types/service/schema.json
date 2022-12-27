@@ -13,7 +13,16 @@
   "pluginOptions": {},
   "attributes": {
     "serviceTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
+    },
+    "serviceDicription": {
+      "type": "string",
+      "required": true
+    },
+    "servicePrice": {
+      "type": "integer",
+      "required": true
     }
   }
 }

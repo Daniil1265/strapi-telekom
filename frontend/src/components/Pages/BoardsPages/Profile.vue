@@ -5,7 +5,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title mb-4">
-                            <div class="userData ml-3">
+                            <div class="user-data ml-3">
                                 <h2 class="d-flex justify-content-center" style="font-size: 1.5rem; font-weight: bold">
                                     Личный кабинет
                                     пользователя</h2>
@@ -30,7 +30,7 @@
                                     <li class="nav-item">
                                         <a class="nav-link" id="connectedServices-tab" data-toggle="tab"
                                             href="#connectedServices" role="tab" aria-controls="connectedServices"
-                                            aria-selected="false">Тарифы и Услуги</a>
+                                            aria-selected="false">Тариф и адрес</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content ml-1" id="myTabContent">
@@ -72,9 +72,21 @@
                                                     <span v-else-if="currentTariff?.id === undefined">Загрузка...</span>
 
                                                     <span class="d-flex justify-content-between" v-else><span>{{
-                                                            currentTariff?.tariffTitle
-                                                    }}</span>
+        currentTariff?.tariffTitle
+}}</span>
                                                         <span>{{ currentTariff?.tariffPrice }} руб</span></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="row">
+                                            <div class="col-12">
+
+                                                <label style="font-weight:bold;">Ваш адрес</label>
+                                                <p>
+                                                    <VueSearch>
+
+                                                    </VueSearch>
                                                 </p>
                                             </div>
                                         </div>
@@ -95,6 +107,7 @@
 
 <script>
 
+import VueSearch from '../../VueSearch.vue';
 
 export default {
     name: 'Profile',
@@ -115,6 +128,10 @@ export default {
             this.$router.push('/login');
         }
     },
+    components: {
+        VueSearch
+
+    }
 
 
 

@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <router-link to="/user" class="nav-link">Услуги</router-link>
+                        <router-link to="/service" class="nav-link">Услуги</router-link>
                     </li>
                 </ul>
 

@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Home from "./components/Pages/Home.vue";
-import BoardUser from "./components/Pages/BoardUser"
+import ServiceList from "./components/Pages/ServiceList.vue"
 import Login from "./components/Pages/Login.vue";
 import Register from "./components/Pages/Register.vue";
 import Profile from "./components/Pages/BoardsPages/Profile.vue"
@@ -29,8 +29,8 @@ const routes = [
     },
 
     {
-        path: "/user",
-        component: BoardUser,
+        path: "/service",
+        component: ServiceList,
     },
 ];
 
