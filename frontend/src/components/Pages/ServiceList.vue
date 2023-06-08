@@ -25,6 +25,7 @@ export default {
         if (ServiceService.getPublicContent()) {
             ServiceService.getPublicContent().then((response) => {
                 this.content = response.data.data;
+                console.log(this.content);
             }, (error) => {
                 this.error =
                     (error.response &&

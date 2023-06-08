@@ -1,4 +1,5 @@
 <template>
+
     <h2 class="d-flex justify-content-center" style="font-size: 1.5rem; font-weight: bold; margin-top: 10px; ">
         Главная страница с тарифами </h2>
     <Tariffs v-bind:tariffs="content" />
