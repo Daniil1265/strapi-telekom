@@ -1,2 +1,2 @@
-# ded normalniy
+# DIPLOM
 
